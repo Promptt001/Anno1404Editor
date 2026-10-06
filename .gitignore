@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Test / coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+# headless suite run record — never ships, never committed
+tests/results.json
+
+# workspace release archives — cut artifacts, not repo content
+annoedit-*.zip
+annoedit-repo-*.tar.gz
+
+# Backups made by the tool or users (never commit game data!)
+*.rda
+*.bak
+backups/
+data1.rda*
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

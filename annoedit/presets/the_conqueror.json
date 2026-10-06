@@ -1,0 +1,92 @@
+{
+  "characters": {
+    "Willem van der Mark": {
+      "dials": {
+        "Build/ColonizeDelayTime": 30000,
+        "Military/MaxUnitCount": 80,
+        "ShipFight/ShipAttackIntervall": 25000,
+        "TownAcquisition/TownAquisitionInterval": 450000,
+        "Espionage/Prop_Thief": 30,
+        "ItemUsage/ItemPriorities/LetterOfMarque": 300,
+        "ItemUsage/ItemPriorities/Pet": 25,
+        "ItemUsage/ItemPriorities/Boarders": 300,
+        "ItemUsage/ItemPriorities/PowderKeg": 450,
+        "Military/MaxMilitaryPoints": 90,
+        "ShipFight/ShipSecurityPercentage": 150,
+        "TownAcquisition/BudgetPerMinute": 1300,
+        "Espionage/Prop_FireRaiser": 15,
+        "Build/ResidentByLevel/Peasant": 36,
+        "Build/ResidentByLevel/Citizen": 120,
+        "Build/ResidentByLevel/Patrician": 150,
+        "Build/ResidentByLevel/Nobleman": 500,
+        "Diplomacy/CompetenceUsageRanges/DeclareWar/Min": -60,
+        "Diplomacy/CompetenceUsageRanges/OrderTribute/Min": 10,
+        "Diplomacy/CompetenceUsageRanges/OfferPeace/Max": -80,
+        "Military/MaxMilitaryPointsInWar": 110,
+        "ShipFight/ShareAttackingShips": 1,
+        "Espionage/Prop_Revolt": 30,
+        "TownAcquisition/Prios/HighDefense": 90,
+        "TownAcquisition/Prios/LowDefense": 50,
+        "TownAcquisition/Prios/ColoTarget": 150,
+        "TownAcquisition/Prios/HighAttack": 450,
+        "TownAcquisition/Prios/LowAttack": 150,
+        "TownAcquisition/Prios/DontBuy": 5,
+        "Build/ResidentUpgradeCount": 7,
+        "ShipFight/ShipHuntDuration": 90000,
+        "TownAcquisition/PreferMainDefense": 40,
+        "Espionage/Prop_Poisen": 25,
+        "Military/BuildSupplyDepot": 1,
+        "ShipFight/ShipGroupFleeMovePercentage": 0,
+        "TownAcquisition/PreferMainAttack": 70,
+        "Build/BuildingSpeed": 100,
+        "ShipFight/ShipGroupFleePercentage": 0,
+        "TownAcquisition/MinBalanceForSharePurchase": 40,
+        "Espionage/Prop_NoAction": 15,
+        "ShipFight/RepairHitpointPercentage": 60,
+        "Espionage/SpyDetectValue": 70,
+        "Build/NomadbyLevel/Citizen": 30,
+        "Build/NomadbyLevel/Patrician": 84,
+        "Build/NomadbyLevel/Nobleman": 110,
+        "ShipFight/MaxOffensiveShipPercentage": 90,
+        "Build/BankBooks/Trade/MaxValuePerLevel/Peasant": 800,
+        "Build/BankBooks/Trade/MaxValuePerLevel/Citizen": 1000,
+        "Build/BankBooks/Trade/MaxValuePerLevel/Patrician": 1200,
+        "Build/BankBooks/Trade/MaxValuePerLevel/Nobleman": 1500,
+        "Build/BankBooks/MilitaryBudget/MaxValuePerLevel/Peasant": 1000,
+        "Build/BankBooks/MilitaryBudget/MaxValuePerLevel/Citizen": 1100,
+        "Build/BankBooks/MilitaryBudget/MaxValuePerLevel/Patrician": 1300,
+        "ShipFight/ShipRepairIntervall": 90000,
+        "Espionage/EspionageActionIntervall": 600000,
+        "Build/MaxEspionageBuildings": 15,
+        "ShipFight/ShipPatrolFleePercentage": 0,
+        "ShipFight/ShipRatioToPlayer": 220,
+        "ShipFight/ShipAmountPerLevel/Citizen": 6,
+        "ShipFight/ShipAmountPerLevel/Patrician": 10,
+        "ShipFight/ShipAmountPerLevel/Nobleman": 18,
+        "ShipFight/IgnoreEnemyStrengthPercentage": 60,
+        "ShipFight/ShipDropItemPercentage": 10,
+        "ShipFight/StopWaitingMinStrengthPercentage": 80,
+        "Diplomacy/DeclareWarMinPlayTime": 600000
+      },
+      "relations": {
+        "War": [
+          "1645006",
+          "1645020",
+          "1645024"
+        ],
+        "AvoidWar": [
+          "1645028",
+          "1645021"
+        ]
+      },
+      "insert_after": {
+        "Build/BankBooks/MilitaryBudget/MaxValuePerLevel/Citizen": "Peasant",
+        "Build/BankBooks/MilitaryBudget/MaxValuePerLevel/Patrician": "Citizen",
+        "Military/MaxMilitaryPoints": "MaxUnitCount",
+        "Military/MaxMilitaryPointsInWar": "MaxMilitaryPoints"
+      }
+    }
+  },
+  "description": "Playtested persona for Willem van der Mark: The Conqueror. Extracted 1:1 from the in-game-verified 'AI Hard Trio v1' build.",
+  "name": "The Conqueror"
+}

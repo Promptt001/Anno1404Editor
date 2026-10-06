@@ -1,0 +1,48 @@
+name: tests
+
+on: [push, pull_request]
+
+jobs:
+  # The GUI gate: this runner design treats a CI environment as implying
+  # --require-gui, so CI must actually HAVE a display and tkinter. This
+  # job is the one that can never go green with the GUI suite skipped.
+  gui-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GUI dependencies (tkinter + virtual display)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-tk xvfb
+      - name: Test suite (GUI tests required, virtual display)
+        run: xvfb-run -a python3 tests/run_tests.py --require-gui
+      - name: CLI smoke
+        run: |
+          python3 -m annoedit.cli --version
+          python3 -m annoedit.cli personas
+          python3 -m annoedit.cli --help
+
+  # Version matrix for the pure-logic tests (the GUI gate above covers
+  # the display-dependent suite). CI=true is neutralized for these steps
+  # only because the gui-tests job enforces the require-gui rule.
+  matrix-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      # The vanilla data1.rda is game data and never committed, so the
+      # archive-dependent tests auto-skip; pure-logic tests always run.
+      - name: Test suite (pure-logic)
+        run: python3 tests/run_tests.py
+        env:
+          CI: ""
+          ANN0140_CI: "0"
+      - name: CLI smoke (pure-logic paths)
+        run: |
+          python3 -m annoedit.cli --version
+          python3 -m annoedit.cli --help

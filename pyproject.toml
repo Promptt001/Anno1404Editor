@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "annoedit"
+dynamic = ["version"]
+description = "Safe, verified editor for Anno 1404 History Edition game data: AI personalities, relations, global dials and island fertility"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["anno", "anno-1404", "rda", "modding", "game-editor", "ai"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: X11 Applications",
+    "Environment :: Win32 (MS Windows)",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Games/Entertainment :: Real Time Strategy",
+]
+
+[project.scripts]
+annoedit = "annoedit.cli:main"
+
+[project.gui-scripts]
+annoedit-gui = "annoedit.gui.app:main"
+
+[tool.setuptools]
+packages = ["annoedit", "annoedit.gui"]
+
+[tool.setuptools.dynamic]
+version = {attr = "annoedit.__version__"}
+
+# The shipped personas live inside the package so pip installs carry them.
+[tool.setuptools.package-data]
+annoedit = ["presets/*.json"]

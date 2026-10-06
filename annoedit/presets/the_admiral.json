@@ -1,0 +1,91 @@
+{
+  "characters": {
+    "Leif Jorgensen": {
+      "dials": {
+        "Build/ColonizeDelayTime": 45000,
+        "Military/MaxUnitCount": 60,
+        "TownAcquisition/TownAquisitionInterval": 600000,
+        "Espionage/Prop_Thief": 30,
+        "ItemUsage/ItemPriorities/ShipBoost": 250,
+        "ShipFight/ShipAmountPerLevel/Citizen": 8,
+        "ShipFight/ShipAmountPerLevel/Patrician": 14,
+        "ItemUsage/ItemPriorities/Pet": 25,
+        "ShipFight/ShipAmountPerLevel/Nobleman": 20,
+        "ItemUsage/ItemPriorities/WhiteFlag": 50,
+        "ItemUsage/ItemPriorities/ExpertNautics": 280,
+        "ItemUsage/ItemPriorities/ExpertMarine": 300,
+        "ItemUsage/ItemPriorities/ShipRepairUpgrade": 250,
+        "ItemUsage/UseWhiteFlagPercentage": 10,
+        "Military/MaxMilitaryPoints": 85,
+        "ShipFight/RepairHitpointPercentage": 60,
+        "TownAcquisition/BudgetPerMinute": 1000,
+        "Build/ResidentByLevel/Peasant": 34,
+        "Build/ResidentByLevel/Citizen": 110,
+        "Build/ResidentByLevel/Patrician": 140,
+        "Build/ResidentByLevel/Nobleman": 450,
+        "Diplomacy/CompetenceUsageRanges/DeclareWar/Min": -60,
+        "Diplomacy/CompetenceUsageRanges/OrderTribute/Min": 10,
+        "Diplomacy/CompetenceUsageRanges/OfferPeace/Max": -80,
+        "Military/MaxMilitaryPointsInWar": 110,
+        "ShipFight/ShipAttackIntervall": 20000,
+        "Espionage/Prop_Revolt": 20,
+        "TownAcquisition/Prios/HighDefense": 300,
+        "TownAcquisition/Prios/LowDefense": 80,
+        "TownAcquisition/Prios/ColoTarget": 120,
+        "TownAcquisition/Prios/HighAttack": 250,
+        "TownAcquisition/Prios/LowAttack": 100,
+        "TownAcquisition/Prios/DontBuy": 20,
+        "Build/ResidentUpgradeCount": 7,
+        "ShipFight/ShipSecurityPercentage": 150,
+        "Build/BuildingSpeed": 100,
+        "Military/BuildSupplyDepot": 1,
+        "ShipFight/ShipHuntDuration": 100000,
+        "TownAcquisition/PreferMainAttack": 40,
+        "TownAcquisition/MinBalanceForSharePurchase": 40,
+        "Espionage/Prop_NoAction": 15,
+        "Build/NomadbyLevel/Citizen": 30,
+        "Build/NomadbyLevel/Patrician": 84,
+        "Build/NomadbyLevel/Nobleman": 110,
+        "Build/TowersPerLevel": 10,
+        "ShipFight/MaxOffensiveShipPercentage": 90,
+        "ShipFight/ShipRepairIntervall": 90000,
+        "Espionage/SpyDetectValue": 70,
+        "Build/BankBooks/Trade/MaxValuePerLevel/Peasant": 750,
+        "Build/BankBooks/Trade/MaxValuePerLevel/Citizen": 950,
+        "Build/BankBooks/Trade/MaxValuePerLevel/Patrician": 1100,
+        "Build/BankBooks/Trade/MaxValuePerLevel/Nobleman": 1400,
+        "Build/BankBooks/MilitaryBudget/MaxValuePerLevel/Peasant": 1000,
+        "Build/BankBooks/MilitaryBudget/MaxValuePerLevel/Citizen": 1100,
+        "Build/BankBooks/MilitaryBudget/MaxValuePerLevel/Patrician": 1200,
+        "Espionage/SpyDetectMinValue": 30,
+        "Build/MaxEspionageBuildings": 10,
+        "ShipFight/ShipPatrolFleePercentage": 0,
+        "Espionage/EspionageActionIntervall": 600000,
+        "ShipFight/CallForHelpRange": 245760,
+        "ShipFight/ShipRatioToPlayer": 250,
+        "ShipFight/ShipDropItemPercentage": 10,
+        "ShipFight/StopWaitingMinStrengthPercentage": 80,
+        "Diplomacy/DeclareWarMinPlayTime": 600000
+      },
+      "relations": {
+        "War": [
+          "1645020",
+          "1645024",
+          "1645026"
+        ],
+        "AvoidWar": [
+          "1645028",
+          "1645022"
+        ]
+      },
+      "insert_after": {
+        "Build/BankBooks/MilitaryBudget/MaxValuePerLevel/Citizen": "Peasant",
+        "Build/BankBooks/MilitaryBudget/MaxValuePerLevel/Patrician": "Citizen",
+        "ShipFight/RepairHitpointPercentage": "ShipAmountPerLevel",
+        "Espionage/SpyDetectValue": "SpyMarketplaceDec"
+      }
+    }
+  },
+  "description": "Playtested persona for Leif Jorgensen: The Admiral. Extracted 1:1 from the in-game-verified 'AI Hard Trio v1' build.",
+  "name": "The Admiral"
+}
